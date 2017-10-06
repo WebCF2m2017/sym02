@@ -1,4 +1,12 @@
 {% extends "base.html.twig" %}
 {% block body %}
-On est dans NewsBundle
+
+    <h1>On est dans NewsBundle</h1><hr/>
+    <div id="articles">
+        {% for article in art %}
+       <h2>{{ article.theTitle }}</h2>
+       <p>{{ article.theText }}</p>
+       <h4>{{ article.theDate|date("d/m/Y H:i:s") }} par {{ article.authorId.surName }} {{ article.authorId.firstName }}</h4><hr/>
+        {% endfor %}
+    </div>
 {% endblock %}

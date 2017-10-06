@@ -52,7 +52,11 @@ class Article
      */
     private $authorid;
 
-
+    // pour avoir la date du jour par défaut lors de la création de l'instance
+    public function __construct()
+    {
+        $this->thedate = new \DateTime();
+    }
 
     /**
      * Get id

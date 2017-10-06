@@ -36,6 +36,11 @@ class Author
     private $surname;
 
 
+    // conversion en string pour le crud
+    public function __toString()
+    {
+        return $this->surname;
+    }
 
     /**
      * Get id
